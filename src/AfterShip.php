@@ -12,17 +12,17 @@ class AfterShip
 
     public function Couriers()
     {
-        return new Couriers(Config::get('aftership.api_key'));
+        return new Couriers(Config::get('services.aftership.api_key'));
     }
 
     public function Trackings()
     {
-        return new Trackings(Config::get('aftership.api_key'));
+        return new Trackings(Config::get('services.aftership.api_key'));
     }
 
     public function LastCheckPoint()
     {
-        return new LastCheckPoint(Config::get('aftership.api_key'));
+        return new LastCheckPoint(Config::get('services.aftership.api_key'));
     }
 
 }

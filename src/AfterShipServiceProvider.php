@@ -13,9 +13,7 @@ class AfterShipServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../config/aftership.php' => config_path('aftership.php'),
-        ]);
+
     }
 
     /**
@@ -25,8 +23,6 @@ class AfterShipServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/aftership.php', 'aftership');
-
         $this->app->bind('laravel-aftership', function () {
             return new AfterShip;
         });
